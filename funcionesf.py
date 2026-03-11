@@ -65,10 +65,10 @@ def juego(vidas,numeroadivinar):
             
 def exportardatos(nomb,intentos,resultado):
     
-    documentoexcel= openpyxl.load_workbook('C:/EjerciciosPython/datosjugadores.xlsx')
+    documentoexcel= openpyxl.load_workbook('datosjugadores.xlsx')
     Hoja = documentoexcel['Hoja 1']
     Hoja.append([nomb, intentos+1, resultado])
-    documentoexcel.save('C:/EjerciciosPython/datosjugadores.xlsx')
+    documentoexcel.save('datosjugadores.xlsx')
     print('Gracias por Jugar!!')
     print()
     print('------------------------------------------------------------------')
@@ -80,7 +80,7 @@ def estadist():
     print()
     print('A continuación te muestro una tabla con los datos de los jugadores:')
     print()
-    documentoexcel= openpyxl.load_workbook('C:/EjerciciosPython/datosjugadores.xlsx')
+    documentoexcel= openpyxl.load_workbook('datosjugadores.xlsx')
     Hoja = documentoexcel['Hoja 1']
     dimensiones = Hoja.calculate_dimension()
     rangoceldas = Hoja[dimensiones]
